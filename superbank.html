@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Store Redirect</title>
+  <script type="text/javascript">
+    function redirectToStore() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // If the user is on iOS
+      if (/iPhone|iPad|iPod/.test(userAgent)) {
+        window.location.href = "https://app.appsflyer.com/id6444720285?pid=telkomsel_int&c=2024_B00004618_S02267_244_1_AB_Superbank__BAU__TD__Mytsel&af_siteid=telkomsel&af_click_lookback=7d&clickid=<<MSISDNMASKING>>&af_adset=2024_B00004618_S02267_244_1_AB_Superbank__BAU__Mytsel&af_ad=TD";
+      }
+      // If the user is on Android
+      else if (/android/i.test(userAgent)) {
+        window.location.href = "https://app.appsflyer.com/id.co.bankfama.android?pid=telkomsel_int&c=2024_B00004618_S02267_244_1_AB_Superbank__BAU__TD__Mytsel&af_siteid=telkomsel&af_click_lookback=7d&clickid=<<MSISDNMASKING>>&af_adset=2024_B00004618_S02267_244_1_AB_Superbank__BAU__Mytsel&af_ad=TD";
+      }
+      // If the user is on Desktop or an unsupported platform
+      else {
+        document.body.innerHTML = "<h2>Please visit this page on a mobile device to download the app.</h2>";
+      }
+    }
+
+    // Redirect when the page is loaded
+    window.onload = redirectToStore;
+  </script>
+</head>
+<body>
+  <p>Redirecting you to the correct app store...</p>
+</body>
+</html>
